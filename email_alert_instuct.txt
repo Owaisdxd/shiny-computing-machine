@@ -1,0 +1,46 @@
+你的仓库/
+│
+├── src/
+│   ├── model_training.py       # 训练YOLO模型的脚本
+│   └── email_utils.py          # 发送带附件的邮件的脚本
+│
+├── data/
+│   └── my128.yaml              # 训练数据的配置文件
+│
+├── models/
+│   └── last.pt                 # 预训练模型文件
+│
+├── attachments/
+│   └── file1.html              # 示例附件文件
+│
+├── README.md                   # 主要文档文件
+└── .gitignore                  # 指定Git忽略的文件和目录
+
+# YOLO模型训练与邮件自动化
+
+本仓库包含用于训练YOLO模型并在训练失败时发送带附件的邮件的脚本。旨在简化使用过程，适合编程知识较少的用户。
+
+## 仓库结构
+
+- **`src/model_training.py`**: 训练YOLO模型的脚本。
+- **`src/email_utils.py`**: 发送带附件的邮件的脚本。
+- **`data/my128.yaml`**: 训练数据的配置文件。
+- **`models/last.pt`**: 预训练模型文件。
+- **`attachments/file1.html`**: 示例附件文件。
+
+## 安装和设置
+
+1. **克隆仓库**:
+   打开终端或命令提示符，运行以下命令：
+   ```bash
+   git clone https://github.com/你的用户名/你的仓库.git
+   cd 你的仓库
+
+pip install -r requirements.txt
+
+EMAIL_SENDER=你的邮箱@gmail.com
+EMAIL_RECEIVER=接收者邮箱@gmail.com
+EMAIL_PASSWD=你的密码
+EMAIL_CC=抄送邮箱@gmail.com
+
+python src/model_training.py
